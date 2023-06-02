@@ -4,6 +4,7 @@ from fpl import FPL
 from goal_contributions import goals_contribution_leaders
 from most_transferred import most_transferred_players
 from bargains_in_form import bargains_in_form
+from mr_reliable import mr_reliable
 
 
 async def back_to_menu():
@@ -20,6 +21,7 @@ async def main():
             "\n1 - Goal Contribution Leaders"
             "\n2 - Most Transferred Players (this GW)"
             "\n3 - Bargains in Form"
+            "\n4 - Mr. Reliable"
             "\n"
         )
     )
@@ -33,6 +35,9 @@ async def main():
     elif menu_selection == 3:
         # Players in the top 100 in form and under £6.0m (excl GKs)
         await bargains_in_form()
+    elif menu_selection == 4:
+        # Players with the most minutes played
+        await mr_reliable()
 
 
 asyncio.run(main())
